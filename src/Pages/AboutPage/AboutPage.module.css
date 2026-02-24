@@ -1,0 +1,143 @@
+.container {
+  padding: 2rem 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.hero {
+  background: linear-gradient(135deg, #0d47a1 0%, #1976d2 100%);
+  color: white;
+  text-align: center;
+  padding: 6rem 1rem;
+  border-radius: 16px;
+  margin-bottom: 4rem;
+}
+
+.heroTitle {
+  font-size: 3.2rem;
+  margin: 0 0 1rem;
+}
+
+.heroSubtitle {
+  font-size: 1.4rem;
+  opacity: 0.9;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.section {
+  margin-bottom: 5rem;
+}
+
+.sectionContent {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.sectionTitle {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #111;
+}
+
+.paragraph {
+  font-size: 1.15rem;
+  line-height: 1.8;
+  color: #444;
+  margin-bottom: 1.2rem;
+}
+
+.featuresSection {
+  background: #f8f9fa;
+  padding: 4rem 1rem;
+  border-radius: 16px;
+}
+
+.featuresGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.featureCard {
+  background: white;
+  padding: 2rem 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.featureCard:hover {
+  transform: translateY(-8px);
+}
+
+.featureIcon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.featureCard h3 {
+  font-size: 1.4rem;
+  margin: 0.5rem 0;
+  color: #1976d2;
+}
+
+.featureCard p {
+  color: #555;
+  font-size: 1rem;
+}
+
+.visionSection {
+  text-align: center;
+  padding: 4rem 1rem;
+  background: #e3f2fd;
+  border-radius: 16px;
+}
+
+.visionTitle {
+  font-size: 2.8rem;
+  margin-bottom: 1.5rem;
+  color: #0d47a1;
+}
+
+.visionText {
+  font-size: 1.3rem;
+  line-height: 1.9;
+  max-width: 800px;
+  margin: 0 auto;
+  color: #333;
+}
+
+.contactHint {
+  text-align: center;
+  margin: 5rem 0 3rem;
+  font-size: 1.3rem;
+  color: #555;
+}
+
+.contactLink {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 12px 32px;
+  background: #1976d2;
+  color: white;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.3s;
+}
+
+.contactLink:hover {
+  background: #1565c0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .heroTitle { font-size: 2.4rem; }
+  .heroSubtitle { font-size: 1.2rem; }
+  .sectionTitle { font-size: 2rem; }
+  .visionTitle { font-size: 2.2rem; }
+}

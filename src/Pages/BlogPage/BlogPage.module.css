@@ -1,0 +1,157 @@
+.container {
+  padding: 2rem 1rem;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.hero {
+  background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+  color: white;
+  text-align: center;
+  padding: 7rem 1rem 5rem;
+  border-radius: 0 0 24px 24px;
+  margin-bottom: 4rem;
+}
+
+.heroTitle {
+  font-size: 3.5rem;
+  margin: 0 0 1rem;
+}
+
+.heroSubtitle {
+  font-size: 1.4rem;
+  max-width: 700px;
+  margin: 0 auto;
+  opacity: 0.95;
+}
+
+.postsSection {
+  margin-bottom: 5rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 2.5rem;
+}
+
+.card {
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 16px 40px rgba(0,0,0,0.12);
+}
+
+.imageWrapper {
+  height: 220px;
+  overflow: hidden;          /* خليه موجود عشان التصميم ما يخربش */
+  background: #f8f9fa;       /* خلفية فاتحة لو الصورة صغيرة */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;             /* مسافة داخلية عشان الصورة ما تلزقش في الحواف */
+}
+
+.cardImage {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;       /* ← ده المهم: الصورة تظهر كاملة بدون قطع */
+  object-position: center;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.card:hover .cardImage {
+  transform: scale(1.08);
+}
+
+.cardContent {
+  padding: 1.5rem;
+}
+
+.date {
+  font-size: 0.9rem;
+  color: #6b7280;
+  display: block;
+  margin-bottom: 0.75rem;
+}
+
+.cardTitle {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin: 0 0 0.8rem;
+  color: #111827;
+  line-height: 1.4;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.excerpt {
+  font-size: 1rem;
+  color: #4b5563;
+  line-height: 1.6;
+  margin: 0 0 1.2rem;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.95rem;
+}
+
+.readTime {
+  color: #6b7280;
+}
+
+.readMore {
+  color: #2563eb;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.readMore:hover {
+  color: #1d4ed8;
+  text-decoration: underline;
+}
+
+.pagination {
+  text-align: center;
+  margin: 4rem 0 2rem;
+}
+
+.loadMore {
+  padding: 14px 40px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  background: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.loadMore:hover {
+  background: #1d4ed8;
+  transform: translateY(-2px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .heroTitle { font-size: 2.6rem; }
+  .heroSubtitle { font-size: 1.25rem; }
+  .grid { gap: 1.8rem; }
+  .cardTitle { font-size: 1.3rem; }
+}

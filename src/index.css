@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,100..1000;1,100..1000&family=Inter:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+  /* Fonts */
+  --font-primary: "Inter", sans-serif;
+  --font-heading: "DM Sans", sans-serif;
+
+  /* Colors */
+  --main_color: #0090f0;
+  --p_color: #7b7b7b;
+  --bg_color: #f3f3f3;
+  --white_color: #ffffff;
+  --color_heading: #253237;
+  --border_color: #d6d6d6d5;
+  --black_color: #111111;
+
+  /* Global */
+  line-height: 1.5;
+  font-weight: 400;
+  font-family: var(--font-primary);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  transition: 0.2s ease-in-out;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  max-height: fit-content;
+  background-color: var(--bg_color);
+  color: var(--black_color);
+  font-family: var(--font-primary);
+}
+h1, h2, h3, h4, h5, h6 {
+  color: var(--color_heading);
+  font-family: var(--font-heading);
+  font-weight: 600;
+}
+
+p {
+  color: var(--p_color);
+  line-height: 1.7;
+}
+span {
+  color: var(--main_color);
+}
+a {
+  text-decoration: none;
+  color: var(--color_heading);
+}
+img {
+  width: 100%;
+  display: block;
+}
+.logo{
+  max-width: 200px;
+}
+
+input,
+button,
+select,
+textarea {
+  outline: none;
+  border: none;
+  font-family: inherit;
+}
+ul{
+  list-style: none;
+}
+input,
+textarea,
+select {
+  padding: 8px 10px;
+  border: 1px solid var(--border_color);
+  border-radius: 6px;
+}
+button {
+  cursor: pointer;
+}
+
+.btn {
+  background-color: var(--main_color);
+  color: var(--white_color);
+  padding: 10px 18px;
+  border-radius: 6px;
+  font-weight: 500;
+  display: inline-block;
+}
+
+.btn:hover {
+  opacity: 0.85;
+}
+
+.btn-outline {
+  background-color: transparent;
+  border: 1px solid var(--main_color);
+  color: var(--main_color);
+}
+
+.btn-outline:hover {
+  background-color: var(--main_color);
+  color: var(--white_color);
+}
+
+
+/* ===================== */
+/* Layout */
+/* ===================== */
+.container {
+  width: 95%;
+  max-width: 1350px;
+  margin: 20px auto;
+}
+
+.flex {
+  display: flex;
+}
+.flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.grid {
+  display: grid;
+  gap: 20px;
+}
+.icons {
+  gap: 20px;
+}
+
+.icon-box {
+  position: relative;
+  font-size: 24px;
+  cursor: pointer;
+  color: var(--color_heading);
+  transition: 0.3s;
+}
+
+.icon-box:hover {
+  color: var(--main_color);
+}
+
+/* رقم فوق الايقونة */
+.badge {
+  position: absolute;
+  top: -6px;
+  right: -8px;
+
+  background-color: var(--main_color);
+  color: var(--white_color);
+
+  font-size: 11px;
+  font-weight: 600;
+
+  width: 18px;
+  height: 18px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+}

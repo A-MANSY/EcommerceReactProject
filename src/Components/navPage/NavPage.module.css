@@ -1,0 +1,40 @@
+.navList {
+  display: flex;
+  gap: 25px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navItem a {
+  text-decoration: none;
+  color: var(--white_color);
+  font-size: 20px;
+  font-weight: 500;
+  padding: 8px 12px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+
+
+.navItem a:hover {
+  border-bottom: 1.6px solid #111; /* خط تحت النص، لونه قريب من الأسود */
+  padding-bottom: 1px; /* شوية مساحة بين النص والخط */
+}
+
+
+/* Responsive: collapse gap on smaller screens */
+@media (max-width: 768px) {
+  .navList {
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  .navItem a {
+    font-size: 10px;
+    padding: 6px 10px;
+  }
+}.active {
+  color: red;
+}

@@ -1,0 +1,157 @@
+.container {
+  padding: 2rem 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.hero {
+  text-align: center;
+  padding: 5rem 1rem 3rem;
+  background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+  color: white;
+  border-radius: 0 0 24px 24px;
+  margin-bottom: 3rem;
+}
+
+.title {
+  font-size: 3.2rem;
+  margin: 0 0 1rem;
+}
+
+.subtitle {
+  font-size: 1.3rem;
+  max-width: 700px;
+  margin: 0 auto;
+  opacity: 0.95;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+}
+
+.formSection, .infoSection {
+  background: white;
+  padding: 2.5rem;
+  border-radius: 16px;
+  box-shadow: 0 6px 25px rgba(0,0,0,0.08);
+}
+
+.sectionTitle {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #111827;
+  text-align: center;
+}
+
+.formGroup {
+  margin-bottom: 1.5rem;
+}
+
+.formGroup label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: #374151;
+}
+
+.formGroup input,
+.formGroup textarea {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border 0.3s;
+}
+
+.formGroup input:focus,
+.formGroup textarea:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59,130,246,0.15);
+}
+
+.submitBtn {
+  width: 100%;
+  padding: 14px;
+  background: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.submitBtn:hover {
+  background: #1d4ed8;
+}
+
+.infoGrid {
+  display: grid;
+  gap: 2rem;
+}
+
+.infoItem {
+  display: flex;
+  gap: 1.2rem;
+  align-items: flex-start;
+}
+
+.icon {
+  font-size: 2.2rem;
+  flex-shrink: 0;
+}
+
+.infoItem h3 {
+  font-size: 1.3rem;
+  margin: 0 0 0.4rem;
+  color: #1e40af;
+}
+
+.infoItem p {
+  margin: 0.3rem 0;
+  color: #4b5563;
+}
+
+.link {
+  color: #2563eb;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+.mapWrapper {
+  margin-top: 3rem;
+}
+
+.mapWrapper h3 {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  color: #111827;
+}
+
+.mapPlaceholder {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .content {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero { padding: 4rem 1rem 2.5rem; }
+  .title { font-size: 2.6rem; }
+  .formSection, .infoSection { padding: 2rem 1.5rem; }
+}

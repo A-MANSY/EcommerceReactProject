@@ -1,0 +1,19 @@
+
+.categoryItem {
+  padding: 10px 20px;
+  transition: all 0.2s;
+  list-style: none;
+  background-color: #222;
+}
+
+.categoryItem:hover {
+  cursor: pointer;
+}
+
+.categoryLink {
+  text-decoration: none;
+  font-size: 14px !important;
+  display: block;
+  width: 100%;
+  color:red;
+}

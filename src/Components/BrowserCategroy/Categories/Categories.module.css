@@ -1,0 +1,62 @@
+/* ===================== */
+/* Dropdown Categories */
+/* ===================== */
+
+.dropdown {
+  position: absolute; /* عشان يبقى تحت الزرار */
+  top: 100%;
+  left: 0;
+  width: 250px; /* العرض المناسب */
+  background-color: var(--white_color);
+  border: 1px solid var(--border_color);
+  border-radius: 10px;
+  margin-top: 5px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  z-index: 100;
+  max-height: 240px; /*ارتفاع محدود */
+  overflow-y: auto; /* scroll إذا زاد المحتوى */
+  transition: all 0.3s ease;
+}
+
+/* List inside dropdown */
+.dropdown ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.dropdown li {
+  padding: 10px 20px;
+  transition: all 0.2s;
+}
+
+.dropdown li:hover {
+  background-color: rgba(147, 11, 238, 0.06);
+  cursor: pointer;
+}
+
+.dropdown li a {
+  text-decoration: none;
+  color: var(--white_color);
+  font-size: 14px;
+  display: block;
+  width: 100%;
+}
+
+/* Scrollbar customization (Optional) */
+.dropdown::-webkit-scrollbar {
+  width: 6px;
+}
+
+
+
+/* Responsive */
+@media (max-width: 768px) {
+  .dropdown {
+    width: 200px;
+  }
+
+  .dropdown li {
+    padding: 8px 15px;
+  }
+}

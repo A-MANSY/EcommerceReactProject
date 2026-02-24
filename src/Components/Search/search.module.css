@@ -1,0 +1,87 @@
+.search_box {
+  position: relative;
+  width: 350px;
+  max-width: 100%; /* عشان مايتعداش على الموبايل */
+}
+
+.search_box input {
+  width: 100%;
+  padding: 12px 60px 12px 15px; /* مساحة للايقونة */
+  border-radius: 30px;
+  border: 1px solid var(--border_color);
+  background-color: var(--white_color);
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.search_box input:focus {
+  border-color: var(--main_color);
+  box-shadow: 0 0 0 3px rgba(0, 144, 240, 0.15);
+}
+
+/* الايقونة */
+.search_icon {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%; /* دائري */
+  background-color: rgba(0, 144, 240, 0.12);
+  font-size: 15px;
+  color: var(--main_color);
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.search_icon:hover {
+  background-color: var(--main_color);
+  color: var(--white_color);
+}
+
+/* ===================== */
+/* Responsive */
+/* ===================== */
+@media (max-width: 1024px) {
+  .search_box {
+    width: 280px;
+  }
+}
+
+@media (max-width: 768px) {
+  .search_box {
+    width: 220px;
+  }
+
+  .search_box input {
+    padding: 10px 50px 10px 12px;
+    font-size: 13px;
+  }
+
+  .search_icon {
+    width: 35px;
+    height: 35px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .search_box {
+    width: 120%;
+  }
+
+  .search_box input {
+    padding: 5px 15px 8px 10px;
+    font-size: 13px;
+  }
+
+  .search_icon {
+    width: 25px;
+    height: 20px;
+    font-size: 10px;
+  }
+}

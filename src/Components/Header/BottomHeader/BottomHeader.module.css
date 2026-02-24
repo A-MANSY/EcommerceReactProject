@@ -1,0 +1,92 @@
+/* ===================== */
+/* Bottom Header Styles */
+/* ===================== */
+
+.BtmHeader {
+  width: 100%;
+  background-color: var(--main_color);
+  border-bottom: 1px solid var(--border_color);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  padding: 10px 0;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  color: #fff;
+  margin: 20px 0;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap; /* يتيح التفاف العناصر على الشاشات الصغيرة */
+}
+
+.icons {
+  display: flex;
+  gap: 15px;
+}
+
+.container {
+  width: 90%;
+  max-width: 1350px;
+  margin: 0 auto;
+}
+
+/* Icon wrapper */
+.iconWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+  font-size: 25px;
+  border-radius: 50%;
+  background-color: rgba(0,144,240,0.05);
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.iconWrapper:hover {
+  background-color: var(--white_color); /* عشان يبان أكتر على main_color */
+  color: var(--main_color);
+}
+
+/* ===================== */
+/* Responsive Styles */
+/* ===================== */
+@media (max-width: 1024px) {
+  .nav {
+    gap: 15px;
+  }
+
+  .iconWrapper {
+    font-size: 22px;
+    padding: 6px;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .icons {
+    width: 100%;
+    justify-content: flex-start;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav {
+    gap: 2px;
+  }
+
+  .iconWrapper {
+ 
+    display: none;
+  }
+}

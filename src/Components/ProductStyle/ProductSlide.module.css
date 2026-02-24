@@ -1,0 +1,139 @@
+.product {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  height: fit-content;
+  min-height: 380px;
+  display: flex;
+  flex-direction: column;
+}
+
+.product:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+}
+
+.image {
+  width: 100%;
+  height: 220px;
+  object-fit: contain;
+  padding: 15px;
+  background: #f9f9f9;
+  transition: transform 0.4s ease;
+}
+
+.product:hover .image {
+  transform: scale(1.05);
+}
+
+.title {
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin: 12px 15px 8px;
+  color: #063fb9;
+  line-height: 1.4;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin: 0 15px 10px;
+  font-size: 0.95rem;
+}
+
+.star {
+  color: #e0e0e0;
+  font-size: 1rem;
+}
+
+.activeStar {
+  color: #ffc107;
+  font-size: 1rem;
+}
+
+.rateNumber {
+  color: #777;
+  font-size: 0.9rem;
+  margin-left: 4px;
+}
+
+.bottom {
+  margin-top: auto;
+  padding: 12px 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid #eee;
+}
+
+.price {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #d32f2f;
+}
+
+.btn {
+  padding: 8px 18px;
+  background: #1976d2;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background: #1565c0;
+  transform: translateY(-2px);
+}
+
+.btn:active {
+  transform: translateY(0);
+}
+.favoriteIcon {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  z-index: 10;
+  cursor: pointer;
+  font-size: 1.6rem;
+  transition: all 0.3s ease;
+  padding: 6px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(4px);
+}
+
+.favoriteIcon:hover {
+  background: rgba(255, 255, 255, 0.95);
+  transform: scale(1.15);
+}
+
+.favorite {
+  color: #555;
+  transition: color 0.3s ease;
+}
+
+.favorite:hover {
+  color: #e91e63;
+}
+
+.favoriteActive {
+  color: #e91e63;          /* لون وردي/أحمر جذاب للـ favorite */
+  animation: heartBeat 0.6s ease;
+}
+
+@keyframes heartBeat {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.4); }
+  100% { transform: scale(1); }
+}

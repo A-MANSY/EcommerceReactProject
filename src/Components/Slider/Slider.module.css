@@ -1,0 +1,165 @@
+.swiper {
+  width: 100%;
+  height: 70vh;
+  min-height: 520px;
+  max-height: 800px;
+}
+
+.swiperSlide {
+  width: 100%;
+  height: 100%;
+}
+
+.slideContent {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  padding: 0 5%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.details {
+  color: white;
+  max-width: 40%;
+}
+
+.details h3 {
+  font-size: 1.8rem;
+  margin: 0;
+}
+
+.details h2 {
+  font-size: 2.2rem;
+  margin: 0.4rem 0;
+}
+
+.details h4 {
+  font-size: 1rem;
+  margin: 0;
+}
+
+.imageContainer {
+  height: 100%;
+  width: 60%;
+  overflow: hidden;
+}
+
+.img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+
+}
+
+@media (max-width: 1024px) {
+  .swiper {
+    height: 65vh;
+    min-height: 500px;
+  }
+
+  .slideContent {
+    padding: 0 4%;
+    gap: 25px;
+  }
+
+  .details {
+    max-width: 40%;
+  }
+
+  .details h3 { font-size: 1.6rem; }
+  .details h2 { font-size: 2rem; }
+  .details h4 { font-size: 0.95rem; }
+
+  .btn button {
+    padding: 10px 28px;
+    font-size: 1rem;
+  }
+
+  .imageContainer {
+    width: 60%;
+  }
+
+  .img {
+    object-fit: contain;
+    object-position: center right;
+  }
+}
+
+@media (max-width: 810px) {
+  .swiper {
+    height: 25vh;
+    min-height: 400px;
+  }
+
+  .slideContent {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 4%;
+    gap: 20px;
+  }
+
+  .details {
+    max-width: 30%;
+    text-align: left;
+  }
+
+  .details h3 { font-size: 1.45rem; }
+  .details h2 { font-size: 1.8rem; }
+  .details h4 { font-size: 0.95rem; }
+
+  .btn button {
+    margin-top: 1rem;
+    padding: 10px 26px;
+    font-size: 0.98rem;
+  }
+
+  .imageContainer {
+    width: 80%;
+    height: 90%;
+  }
+
+  .img {
+    object-fit: contain;
+    object-position: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .swiper {
+    height: 20vh;
+    min-height: 300px;
+    max-height: 550px;
+  }
+
+  .slideContent {
+    padding: 0 5%;
+    gap: 15px;
+  }
+
+  .details {
+    max-width: 33%;
+  }
+
+  .details h3 { font-size: 0.8rem; }
+  .details h2 { font-size: 1rem; }
+  .details h4 { font-size: 0.7rem; }
+
+  .btn button {
+    padding: 5px 15px;
+    font-size: 0.67rem;
+  }
+
+  .imageContainer {
+    width:70%;
+    height: 100%;
+  }
+
+  .img {
+    object-fit: contain;
+    object-position: center;
+  }
+}   
