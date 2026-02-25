@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import {  useParams } from 'react-router-dom';
 import { useCategroyContext } from '../../Contexts/CategroyContext/CategroyProvider';
 import { FaStar, FaHeart, FaRegHeart } from "react-icons/fa";
 import Button from '../../Components/Btn/Button';
@@ -9,15 +9,16 @@ import { useCartContext } from '../../Contexts/CartContext/Cart';
 export default function ProductPage() {
   const { id } = useParams();
   const { BASE_URL } = useCategroyContext();
-  const [isFavorite, setIsFavorite] = useState(false);
   const [data, setData] = useState({});
   const [loading, setLoading] = useState(true);
   const [selectedImage, setSelectedImage] = useState(0); 
-  const{addToCart,   addToFavorite, removeFromFavorite}=useCartContext()
-   // أضف ده مع الـ states
- const toggleFavorite = () => {
-    setIsFavorite(!isFavorite);
-  };
+  const{addToCart,   addToFavorite, removeFromCart,removeFromFavorite,favorite,products}=useCartContext()
+const isFavorite = favorite.some(
+  (item) => item.id === data.id
+);
+const isInCart = products?.some(
+  (item) => item.id === data.id
+);
   useEffect(() => {
     async function getDetails() {
       try {
@@ -61,19 +62,23 @@ export default function ProductPage() {
     </div>
     <div className={styles.detailsSection}>
       <h2 className={styles.productTitle}>{data.title}  
-          <span 
-          className={styles.favoriteIcon}
-          onClick={(e) => {
-            e.stopPropagation();
-            toggleFavorite();
-          }}
-        >
-          {isFavorite ? (
-            <FaHeart className={styles.favoriteActive} onClick={()=>addToFavorite(data)} />
-          ) : (
-            <FaRegHeart className={styles.favorite} onClick={()=>removeFromFavorite(data.id)}/>
-          )}
-        </span>
+        <span
+  className={styles.favoriteIcon}
+  onClick={(e) => {
+    e.stopPropagation();
+    if (isFavorite) {
+      removeFromFavorite(data.id);
+    } else {
+      addToFavorite(data);
+    }
+  }}
+>
+  {isFavorite ? (
+    <FaHeart className={styles.favoriteActive} />
+  ) : (
+    <FaRegHeart className={styles.favorite} />
+  )}
+</span>
         </h2>
       <div className={styles.rating}>
         {[...Array(5)].map((_, i) => (
@@ -96,17 +101,27 @@ export default function ProductPage() {
       <p className={styles.stock}>
         Hurry up! {data.stock > 10 ? "" : "only"} {data.stock} {data.availabilityStatus}
       </p>
+      {
+        isInCart && <h2> this product in your cart </h2> 
+      }
 
       <div className={styles.actions}>
-<Button
-  className={styles.addToCartBtn}
-  onClick={() => {
-    console.log("Product before add:", data);
-    addToCart(data);
-  }}
->
-  Add to Cart
-</Button>      </div>
+{isInCart ? (
+  <Button
+    className={styles.inCartBtn}
+    onClick={() => removeFromCart(data.id)}
+  >
+    Remove From Cart
+  </Button>
+) : (
+  <Button
+    className={styles.addToCartBtn}
+    onClick={() => addToCart(data)}
+  >
+    Add To Cart
+  </Button>
+)}
+</div>
     </div>
   </div>
   <div className={styles.similarSection}>

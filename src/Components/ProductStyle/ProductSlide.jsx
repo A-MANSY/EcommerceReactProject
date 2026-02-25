@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 import { useCartContext } from '../../Contexts/CartContext/Cart';
 export default function ProductSlide({ product }) {
   const{addToCart, addToFavorite,
-  removeFromFavorite,favorite }=useCartContext()
+  removeFromFavorite,favorite,products,removeFromCart }=useCartContext()
   const isFav = favorite.some(item => item.id === product.id);
 
   const handleFavorite = (e) => {
@@ -15,7 +15,9 @@ export default function ProductSlide({ product }) {
       addToFavorite(product);
     }
   };
-
+const isInCart = products?.some(
+  (item) => item.id === product.id
+);
   return (
   <div className={styles.product}>
       <div className={styles.favoriteIcon} onClick={handleFavorite}>
@@ -39,16 +41,26 @@ export default function ProductSlide({ product }) {
           <span className={styles.rateNumber}>({product.rating})</span>
         </div>
       </Link>
-
+    
       <div className={styles.bottom}>
         <span className={styles.price}>${product.price}</span>
-        <button
+       {
+       isInCart?
+       <button
+          className={styles.btn}
+          type='button'
+          onClick={(e) => { e.stopPropagation(); e.preventDefault(); ;removeFromCart(product.id); }}
+        >
+          remove from cart
+        </button>
+       :<button
           className={styles.btn}
           type='button'
           onClick={(e) => { e.stopPropagation(); e.preventDefault(); ;addToCart(product); }}
         >
-          Add
+          add to cart
         </button>
+        }
       </div>
     </div>
   );

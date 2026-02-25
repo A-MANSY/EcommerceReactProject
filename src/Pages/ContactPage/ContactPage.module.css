@@ -15,6 +15,7 @@
 
 .title {
   font-size: 3.2rem;
+  color: #5a2b2b;
   margin: 0 0 1rem;
 }
 
@@ -23,6 +24,7 @@
   max-width: 700px;
   margin: 0 auto;
   opacity: 0.95;
+  color: #fff;
 }
 
 .content {

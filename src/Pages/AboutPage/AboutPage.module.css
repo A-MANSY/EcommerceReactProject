@@ -16,6 +16,7 @@
 .heroTitle {
   font-size: 3.2rem;
   margin: 0 0 1rem;
+  color: #5a2b2b;
 }
 
 .heroSubtitle {
@@ -23,6 +24,8 @@
   opacity: 0.9;
   max-width: 700px;
   margin: 0 auto;
+  color: white;
+
 }
 
 .section {

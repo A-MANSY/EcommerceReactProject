@@ -1,0 +1,30 @@
+.productsGrid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);   /* لاب توب كبير */
+  gap: 1.2rem;
+  padding: 1rem 0;
+}
+
+@media (max-width: 1199px) {
+  .productsGrid {
+    grid-template-columns: repeat(4, 1fr);   /* شاشات متوسطة كبيرة */
+  }
+}
+
+@media (max-width: 991px) {
+  .productsGrid {
+    grid-template-columns: repeat(3, 1fr);   /* تابلت كبير */
+  }
+}
+
+@media (max-width: 767px) {
+  .productsGrid {
+    grid-template-columns: repeat(2, 1fr);   /* موبايل عادي */
+  }
+}
+
+@media (max-width: 40px) {
+  .productsGrid {
+    grid-template-columns: 2fr;              /* موبايل صغير */
+  }
+}

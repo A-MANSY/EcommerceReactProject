@@ -17,8 +17,8 @@ export default function SliderComponent({ children }) {
         breakpoints={{
           1024: { slidesPerView: 5 },
           768: { slidesPerView: 3 },
-          480: { slidesPerView: 2 },
-          0: { slidesPerView: 1 },
+          420: { slidesPerView: 2 },
+          0: { slidesPerView: 2 },
         }}
         pagination={{
           type: 'fraction',

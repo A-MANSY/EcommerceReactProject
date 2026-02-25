@@ -13,7 +13,7 @@
   margin-top: 5px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   z-index: 100;
-  max-height: 240px; /*ارتفاع محدود */
+  max-height: 340px; /*ارتفاع محدود */
   overflow-y: auto; /* scroll إذا زاد المحتوى */
   transition: all 0.3s ease;
 }
@@ -31,7 +31,7 @@
 }
 
 .dropdown li:hover {
-  background-color: rgba(147, 11, 238, 0.06);
+  background-color: rgba(11, 29, 196, 0.932);
   cursor: pointer;
 }
 
@@ -42,6 +42,9 @@
   display: block;
   width: 100%;
 }
+.dropdown li a:hover{
+  color: var(--black_color);
+} 
 
 /* Scrollbar customization (Optional) */
 .dropdown::-webkit-scrollbar {

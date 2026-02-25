@@ -14,8 +14,18 @@ export default function Toast({ toast }) {
         <h4>{product.title}</h4>
         <span>${product.price}</span>
       </div>
-      {type === 'add' ?<FaCheckCircle className={styles.icon} />:<CiCircleRemove className={styles.icon}/>} 
-      <Link to={'card'} onClick={scroll(0,0)}>view cart</Link>
+      {type === 'add'|| type==="fav-add" ?<FaCheckCircle className={styles.icon} />:<CiCircleRemove className={styles.icon}/>} 
+      
+      {
+        type === "add" && <Link to={'card'}>view cart</Link>
+        ||
+        type === "remove" && <Link to={'card'}>Remove from  cart</Link>
+        ||
+        type ===  "fav-add" && <Link to={'card'}>view favorite</Link>
+        ||
+        type === "fav-remove" && <Link to={'card'}>Remove from  favorite</Link>
+        
+      }
       </div>
   );
 }

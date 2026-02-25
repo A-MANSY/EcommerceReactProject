@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { useCategroyContext } from "../../Contexts/CategroyContext/CategroyProvider";
-import ProductSlide from "../../Components/ProductStyle/ProductSlide";
-
+import ProductSlide from '../../Components/ProductStyle/ProductSlide'
+import styles from './Categroy.module.css'
 export default function CategoryPage() {
   const { categoryName } = useParams();
   const { BASE_URL } = useCategroyContext();
@@ -30,11 +30,12 @@ export default function CategoryPage() {
   return (
     <div className="container">
       <h1>{categoryName}</h1>
-      <div style={{ display: "flex", flexWrap: "wrap", gap: "1rem" }}>
-        {products.map((product) => (
-          <ProductSlide key={product.id} product={product} />
-        ))}
-      </div>
+      <hr />
+<div className={styles.productsGrid}>
+  {products.map((product) => (
+    <ProductSlide key={product.id} product={product} />
+  ))}
+</div>
     </div>
   );
 }
