@@ -21,9 +21,9 @@ export default function Toast({ toast }) {
         ||
         type === "remove" && <Link to={'card'}>Remove from  cart</Link>
         ||
-        type ===  "fav-add" && <Link to={'card'}>view favorite</Link>
+        type ===  "fav-add" && <Link to={'favorite'}>view favorite</Link>
         ||
-        type === "fav-remove" && <Link to={'card'}>Remove from  favorite</Link>
+        type === "fav-remove" && <Link to={'favorite'}>Remove from  favorite</Link>
         
       }
       </div>

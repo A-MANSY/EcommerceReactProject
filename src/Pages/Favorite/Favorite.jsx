@@ -24,7 +24,7 @@ export default function Favorite() {
               <span className={styles.price}>
                 ${Number(product.price).toFixed(2)}
               </span>  
-            <Button onClick={()=>{addToCart(product),removeFromFavorite(product.id)}}>+</Button>
+            <Button onClick={()=>{addToCart(product),setTimeout(removeFromFavorite(product.id),2000)}}>add to your cart</Button>
 
             </div>
             <div className={ `${styles.deleteBtn} ${styles.row}`}>

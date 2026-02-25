@@ -4,7 +4,6 @@ import styles from './ContactPage.module.css';
 export default function ContactPage() {
   return (
     <div className={styles.container}>
-      {/* Hero / Header */}
       <section className={styles.hero}>
         <h1 className={styles.title}>Contact Us</h1>
         <p className={styles.subtitle}>
@@ -13,7 +12,6 @@ export default function ContactPage() {
       </section>
 
       <div className={styles.content}>
-        {/* Contact Form */}
         <section className={styles.formSection}>
           <h2 className={styles.sectionTitle}>Send us a message</h2>
           
@@ -49,7 +47,6 @@ export default function ContactPage() {
           </form>
         </section>
 
-        {/* Contact Info */}
         <section className={styles.infoSection}>
           <h2 className={styles.sectionTitle}>Get in Touch</h2>
           

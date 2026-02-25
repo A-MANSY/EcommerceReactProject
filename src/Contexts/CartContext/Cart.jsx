@@ -24,6 +24,7 @@ useEffect(() => {
 useEffect(() => {
   localStorage.setItem("favoriteProducts", JSON.stringify(favorite));
 }, [favorite]);
+
   // ====== Cart Functions ======
   function addToCart(product) {
     if (!product || !product.id) return console.log("Invalid product");
@@ -68,6 +69,7 @@ useEffect(() => {
     return products.reduce((sum, item) => sum + item.quantity, 0);
   }
 
+  
   // ====== Favorite Functions ======
   function addToFavorite(product) {
     if (!product || !product.id) return console.log("Invalid product");
